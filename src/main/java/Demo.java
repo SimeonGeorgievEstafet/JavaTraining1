@@ -22,8 +22,15 @@ public class Demo {
                 throw new MathException("Input String cannot be parsed to Integer.");
             }
 
-         // I want a conflict here!!!
 
+            System.out.println("Please enter second digit:");
+            b = sc.nextLine();
+            try {
+                intValueOfB = Integer.parseInt(b);
+            } catch (NumberFormatException e) {
+                throw new MathException("Input String cannot be parsed to Integer.");
+            }
+            log.info("making conflicts");
         } catch (ArithmeticException e) {
             throw new MathException("Invalid operation");
         }
