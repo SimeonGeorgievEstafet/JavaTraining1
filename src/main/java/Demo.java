@@ -1,7 +1,9 @@
 import Exceptions.MathException;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Scanner;
 
+@Slf4j
 public class Demo {
 
 
@@ -22,14 +24,15 @@ public class Demo {
                 throw new MathException("Input String cannot be parsed to Integer.");
             }
 
+
             System.out.println("Please enter second digit:");
             b = sc.nextLine();
             try {
                 intValueOfB = Integer.parseInt(b);
             } catch (NumberFormatException e) {
-                throw new MathException("Input String cannot be parsed to Integer." );
+                throw new MathException("Input String cannot be parsed to Integer.");
             }
-
+            log.info("making conflicts");
         } catch (ArithmeticException e) {
             throw new MathException("Invalid operation");
         }
