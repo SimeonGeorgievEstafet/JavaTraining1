@@ -1,9 +1,9 @@
-import Exceptions.MathException;
+package Exceptions;
 
-public class Demo3 {
+public class TryWithMultipleExceptionsTraining {
 
 
-    public static void main(String[] args) throws MathException {
+    public static void main(String[] args) {
 
         String[] arrayOfWords = {"test", null};
 
