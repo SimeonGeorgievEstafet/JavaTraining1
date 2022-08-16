@@ -1,3 +1,5 @@
+package Exceptions;
+
 public class ExceptionsTraining {
 
     public static void main(String[] args) {
