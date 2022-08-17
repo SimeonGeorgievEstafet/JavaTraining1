@@ -1,7 +1,8 @@
 import Exceptions.MathException;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Scanner;
-
+@Slf4j
 public class Demo {
 
 
