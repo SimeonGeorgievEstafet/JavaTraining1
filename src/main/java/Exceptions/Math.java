@@ -1,3 +1,5 @@
+package Exceptions;
+
 import Exceptions.MathException;
 
 public class Math {

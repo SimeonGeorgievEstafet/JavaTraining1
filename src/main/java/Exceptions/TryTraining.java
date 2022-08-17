@@ -1,9 +1,10 @@
-import Exceptions.MathException;
+package Exceptions;
+
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Scanner;
 @Slf4j
-public class Demo {
+public class TryTraining {
 
 
     public static void main(String[] args) throws MathException {
@@ -11,32 +12,33 @@ public class Demo {
         Math calculator = new Math();
         Scanner sc = new Scanner(System.in);
         String a, b;
+        double c;
+
         int intValueOfA, intValueOfB;
 
 
         try {
             System.out.println("Please enter first digit:");
             a = sc.nextLine();
-            try {
-                intValueOfA = Integer.parseInt(a);
-            } catch (NumberFormatException e) {
-                throw new MathException("Input String cannot be parsed to Integer.");
-            }
-
-
             System.out.println("Please enter second digit:");
             b = sc.nextLine();
+
             try {
+                intValueOfA = Integer.parseInt(a);
                 intValueOfB = Integer.parseInt(b);
             } catch (NumberFormatException e) {
                 throw new MathException("Input String cannot be parsed to Integer.");
             }
-            log.info("making conflicts");
-        } catch (ArithmeticException e) {
-            throw new MathException("Invalid operation");
+
+            c = calculator.divideTwoIntegers(intValueOfA, intValueOfB);
+
+        } catch (ArithmeticException ex) {
+            throw new MathException("Divide by 0 is forbidden!");
+        } finally {
+            sc.close();
         }
 
-        System.out.println("The result of division is: " + calculator.divideTwoIntegers(intValueOfA, intValueOfB));
+        System.out.println("The result of division is: " + c);
     }
 
 }
