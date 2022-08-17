@@ -7,7 +7,7 @@ public class WordInSentenceTraining {
     public static void main(String[] args) {
 
         final String WORLD = "World";
-        final String MARS = "Mars";
+        final String ConflictVariable = "Mars";
         final String TESTING = "Testing";
 
         Scanner sc = new Scanner(System.in);
