@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class DatabaseSingleton {
 
-    private static DatabaseSingleton instance = new DatabaseSingleton();
+    private static final DatabaseSingleton instance = new DatabaseSingleton();
 
     private DatabaseSingleton() {
     }
