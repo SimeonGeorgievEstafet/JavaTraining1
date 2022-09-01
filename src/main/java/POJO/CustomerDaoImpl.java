@@ -110,7 +110,7 @@ public class CustomerDaoImpl implements CustomerDao {
         try {
             if (rs.next()) {
                 CustomerId = Integer.parseInt(rs.getString(1));
-//                System.out.println(CustomerId);
+                System.out.println(CustomerId);
             }
             return CustomerId;
 

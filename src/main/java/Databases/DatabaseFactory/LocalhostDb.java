@@ -21,6 +21,7 @@ public class LocalhostDb implements Database {
         final String USER = props.getProperty("db.username");
         final String PASS = props.getProperty("db.password");
         final String QUERY = "SELECT * FROM products_inventory";
+
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(QUERY);) {
